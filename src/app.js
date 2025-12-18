@@ -9,6 +9,8 @@ app.use(cors());              // لاحقًا نقيد الدومين
 app.use(express.json());
 
 // Health
+app.get("/health", (req, res) => res.json({ ok: true }));
+
 app.get("/", (req, res) => res.send("API Running"));
 
 // Auth
